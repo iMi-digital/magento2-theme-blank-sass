@@ -2,51 +2,96 @@
 //  Navigation
 //  ---------------------------------------------
 
+$_nav__indent-side                       : 15px !default;
+$_nav-background-color                   : $secondary__color__light !default;
+$_nav-border                             : none !default;
+$_nav-level0-font-size                   : 16px !default;
+$_nav-level0-font-weight                 : $font-weight__bold !default;
+$_nav-level0-item-line-height            : inherit !default;
+$_nav-level0-item-margin                 : 0 !default;
+$_nav-level0-item-padding                : 8px $indent__xl 8px 15px !default;
+$_nav-level0-text-transform              : uppercase !default;
+
+$_nav-level0-item-background-color       : inherit !default;
+$_nav-level0-item-border                 : 1px solid $color-gray82 !default;
+$_nav-level0-item-color                  : $color-gray34 !default;
+$_nav-level0-item-text-decoration        : none !default;
+
+$_nav-level0-item-background-color-active: inherit !default;
+$_nav-level0-item__active__border-color  : $color-orange-red1 !default;
+$_nav-level0-item__active__border-style  : solid !default;
+$_nav-level0-item__active__border-width  : 0 0 0 8px !default;
+$_nav-level0-item-color-active           : inherit !default;
+$_nav-level0-item-text-decoration-active : inherit !default;
+
+$_submenu-background-color               : inherit !default;
+$_submenu-border                         : none !default;
+$_submenu-font-size                      : inherit !default;
+$_submenu-font-weight                    : $font-weight__regular !default;
+$_submenu-line-height                    : 1.3 !default;
+$_submenu-item__padding-top              : $indent__s !default;
+$_submenu-item__padding-right            : 0 !default;
+$_submenu-item__padding-bottom           : $indent__s !default;
+$_submenu-item__padding-left             : 15px !default;
+
+$_submenu-item-background-color          : inherit !default;
+$_submenu-item-border                    : none !default;
+$_submenu-item-color                     : $color-gray34 !default;
+$_submenu-item-text-decoration           : inherit !default;
+
+$_submenu-item-background-color-active   : inherit !default;
+$_submenu-item__active__border           : 8px !default;
+$_submenu-item__active__border-color     : $color-orange-red1 !default;
+$_submenu-item__active__border-style     : solid !default;
+$_submenu-item__active__border-width     : 0 0 0 8px !default;
+$_submenu-item-color-active              : inherit !default;
+$_submenu-item-text-decoration-active    : inherit !default;
+
 @mixin lib-main-navigation(
-    $_nav__indent-side                       : 15px,
-    $_nav-background-color                   : $secondary__color__light,
-    $_nav-border                             : none,
-    $_nav-level0-font-size                   : 16px,
-    $_nav-level0-font-weight                 : $font-weight__bold,
-    $_nav-level0-item-line-height            : inherit,
-    $_nav-level0-item-margin                 : 0,
-    $_nav-level0-item-padding                : 8px $indent__xl 8px 15px,
-    $_nav-level0-text-transform              : uppercase,
+    $_nav__indent-side                       :  $_nav__indent-side                       ,
+    $_nav-background-color                   :  $_nav-background-color                   ,
+    $_nav-border                             :  $_nav-border                             ,
+    $_nav-level0-font-size                   :  $_nav-level0-font-size                   ,
+    $_nav-level0-font-weight                 :  $_nav-level0-font-weight                 ,
+    $_nav-level0-item-line-height            :  $_nav-level0-item-line-height            ,
+    $_nav-level0-item-margin                 :  $_nav-level0-item-margin                 ,
+    $_nav-level0-item-padding                :  $_nav-level0-item-padding                ,
+    $_nav-level0-text-transform              :  $_nav-level0-text-transform              ,
 
     $_nav-level0-item-background-color       : inherit,
-    $_nav-level0-item-border                 : 1px solid $color-gray82,
-    $_nav-level0-item-color                  : $color-gray34,
-    $_nav-level0-item-text-decoration        : none,
+    $_nav-level0-item-border                 : $_nav-level0-item-border,
+    $_nav-level0-item-color                  : $_nav-level0-item-color,
+    $_nav-level0-item-text-decoration        : $_nav-level0-item-text-decoration,
 
-    $_nav-level0-item-background-color-active: inherit,
-    $_nav-level0-item__active__border-color  : $color-orange-red1,
-    $_nav-level0-item__active__border-style  : solid,
-    $_nav-level0-item__active__border-width  : 0 0 0 8px,
-    $_nav-level0-item-color-active           : inherit,
-    $_nav-level0-item-text-decoration-active : inherit,
+    $_nav-level0-item-background-color-active:  $_nav-level0-item-background-color-active,
+    $_nav-level0-item__active__border-color  :  $_nav-level0-item__active__border-color  ,
+    $_nav-level0-item__active__border-style  :  $_nav-level0-item__active__border-style  ,
+    $_nav-level0-item__active__border-width  :  $_nav-level0-item__active__border-width  ,
+    $_nav-level0-item-color-active           :  $_nav-level0-item-color-active           ,
+    $_nav-level0-item-text-decoration-active :  $_nav-level0-item-text-decoration-active ,
 
-    $_submenu-background-color               : inherit,
-    $_submenu-border                         : none,
-    $_submenu-font-size                      : inherit,
-    $_submenu-font-weight                    : $font-weight__regular,
-    $_submenu-line-height                    : 1.3,
-    $_submenu-item__padding-top              : $indent__s,
-    $_submenu-item__padding-right            : 0,
-    $_submenu-item__padding-bottom           : $indent__s,
-    $_submenu-item__padding-left             : 15px,
+    $_submenu-background-color               :  $_submenu-background-color               ,
+    $_submenu-border                         :  $_submenu-border                         ,
+    $_submenu-font-size                      :  $_submenu-font-size                      ,
+    $_submenu-font-weight                    :  $_submenu-font-weight                    ,
+    $_submenu-line-height                    :  $_submenu-line-height                    ,
+    $_submenu-item__padding-top              :  $_submenu-item__padding-top              ,
+    $_submenu-item__padding-right            :  $_submenu-item__padding-right            ,
+    $_submenu-item__padding-bottom           :  $_submenu-item__padding-bottom           ,
+    $_submenu-item__padding-left             :  $_submenu-item__padding-left             ,
 
-    $_submenu-item-background-color          : inherit,
-    $_submenu-item-border                    : none,
-    $_submenu-item-color                     : $color-gray34,
-    $_submenu-item-text-decoration           : inherit,
+    $_submenu-item-background-color          :  $_submenu-item-background-color          ,
+    $_submenu-item-border                    :  $_submenu-item-border                    ,
+    $_submenu-item-color                     :  $_submenu-item-color                     ,
+    $_submenu-item-text-decoration           :  $_submenu-item-text-decoration           ,
 
-    $_submenu-item-background-color-active   : inherit,
-    $_submenu-item__active__border           : 8px,
-    $_submenu-item__active__border-color     : $color-orange-red1,
-    $_submenu-item__active__border-style     : solid,
-    $_submenu-item__active__border-width     : 0 0 0 8px,
-    $_submenu-item-color-active              : inherit,
-    $_submenu-item-text-decoration-active    : inherit
+    $_submenu-item-background-color-active   :  $_submenu-item-background-color-active   ,
+    $_submenu-item__active__border           :  $_submenu-item__active__border           ,
+    $_submenu-item__active__border-color     :  $_submenu-item__active__border-color     ,
+    $_submenu-item__active__border-style     :  $_submenu-item__active__border-style     ,
+    $_submenu-item__active__border-width     :  $_submenu-item__active__border-width     ,
+    $_submenu-item-color-active              :  $_submenu-item-color-active              ,
+    $_submenu-item-text-decoration-active    :  $_submenu-item-text-decoration-active
 ) {
     .navigation {
         background: $_nav-background-color;
@@ -208,64 +253,122 @@
 //  Desktop
 //  _____________________________________________
 
+$desktop-nav-background-color                   : $color-gray94 !default;
+$desktop-nav-border                             : none !default;
+$desktop-nav-font-size                          : inherit !default;
+$desktop-nav-font-weight                        : $font-weight__bold !default;
+
+$desktop-nav-level0-item-line-height            : 53px !default;
+$desktop-nav-level0-item-margin                 : 0 $indent__s 0 0 !default;
+$desktop-nav-level0-item-padding                : 0 12px !default;
+
+$desktop-nav-level0-item-background-color       : inherit !default;
+$desktop-nav-level0-item-border                 : none !default;
+$desktop-nav-level0-item-color                  : $color-gray34 !default;
+$desktop-nav-level0-item-text-decoration        : none !default;
+
+$desktop-nav-level0-item-background-color-hover : inherit !default;
+$desktop-nav-level0-item-border-hover           : none !default;
+$desktop-nav-level0-item-color-hover            : $primary__color !default;
+$desktop-nav-level0-item-text-decoration-hover  : none !default;
+
+$desktop-nav-level0-item-background-color-active: inherit !default;
+$desktop-nav-level0-item__active__border-color  : $color-orange-red1 !default;
+$desktop-nav-level0-item__active__border-style  : solid !default;
+$desktop-nav-level0-item__active__border-width  : 0 0 3px !default;
+$desktop-nav-level0-item-color-active           : $primary__color !default;
+$desktop-nav-level0-item-text-decoration-active : none !default;
+
+$desktop-submenu-background-color               : $page__background-color !default;
+$desktop-submenu-border-width                   : $border-width__base !default;
+$desktop-submenu-border-style                   : solid !default;
+$desktop-submenu-border-color                   : $border-color__base !default;
+$desktop-submenu-box-shadow                     : 0 $indent__xs $indent__xs rgba(0, 0, 0, 0.19) !default;
+$desktop-submenu-font-size                      : inherit !default;
+$desktop-submenu-font-weight                    : $font-weight__bold !default;
+$desktop-submenu-min-width                      : 230px !default;
+$desktop-submenu-padding                        : 15px 0 !default;
+
+$desktop-submenu-arrow                          : true !default;
+$desktop-submenu-arrow-size                     : 10px !default;
+$desktop-submenu-arrow-left                     : 20px !default;
+
+$desktop-submenu-item-padding                   : 8px $indent__base !default;
+$desktop-submenu-item-background-color          : inherit !default;
+$desktop-submenu-item-border                    : none !default;
+$desktop-submenu-item-color                     : $primary__color !default;
+$desktop-submenu-item-text-decoration           : inherit !default;
+
+$desktop-submenu-item__hover__background-color  : $secondary__color !default;
+$desktop-submenu-item-border-hover              : none !default;
+$desktop-submenu-item-color-hover               : $primary__color !default;
+$desktop-submenu-item-text-decoration-hover     : none !default;
+
+$desktop-submenu-item-background-color-active   : inherit !default;
+$desktop-submenu-item__active__border-color     : $color-orange-red1 !default;
+$desktop-submenu-item__active__border-style     : solid !default;
+$desktop-submenu-item__active__border-width     : 0 0 0 3px !default;
+$desktop-submenu-item-color-active              : inherit !default;
+$desktop-submenu-item-text-decoration-active    : inherit !default;
+
 @mixin lib-main-navigation-desktop(
-    $_nav-background-color                   : $color-gray94,
-    $_nav-border                             : none,
-    $_nav-font-size                          : inherit,
-    $_nav-font-weight                        : $font-weight__bold,
+    $_nav-background-color                   : $desktop-nav-background-color                   ,
+    $_nav-border                             : $desktop-nav-border                             ,
+    $_nav-font-size                          : $desktop-nav-font-size                          ,
+    $_nav-font-weight                        : $desktop-nav-font-weight                        ,
 
-    $_nav-level0-item-line-height            : 53px,
-    $_nav-level0-item-margin                 : 0 $indent__s 0 0,
-    $_nav-level0-item-padding                : 0 12px,
+    $_nav-level0-item-line-height            : $desktop-nav-level0-item-line-height            ,
+    $_nav-level0-item-margin                 : $desktop-nav-level0-item-margin                 ,
+    $_nav-level0-item-padding                : $desktop-nav-level0-item-padding                ,
 
-    $_nav-level0-item-background-color       : inherit,
-    $_nav-level0-item-border                 : none,
-    $_nav-level0-item-color                  : $color-gray34,
-    $_nav-level0-item-text-decoration        : none,
+    $_nav-level0-item-background-color       : $desktop-nav-level0-item-background-color       ,
+    $_nav-level0-item-border                 : $desktop-nav-level0-item-border                 ,
+    $_nav-level0-item-color                  : $desktop-nav-level0-item-color                  ,
+    $_nav-level0-item-text-decoration        : $desktop-nav-level0-item-text-decoration        ,
 
-    $_nav-level0-item-background-color-hover : inherit,
-    $_nav-level0-item-border-hover           : none,
-    $_nav-level0-item-color-hover            : $primary__color,
-    $_nav-level0-item-text-decoration-hover  : none,
+    $_nav-level0-item-background-color-hover : $desktop-nav-level0-item-background-color-hover ,
+    $_nav-level0-item-border-hover           : $desktop-nav-level0-item-border-hover           ,
+    $_nav-level0-item-color-hover            : $desktop-nav-level0-item-color-hover            ,
+    $_nav-level0-item-text-decoration-hover  : $desktop-nav-level0-item-text-decoration-hover  ,
 
-    $_nav-level0-item-background-color-active: inherit,
-    $_nav-level0-item__active__border-color  : $color-orange-red1,
-    $_nav-level0-item__active__border-style  : solid,
-    $_nav-level0-item__active__border-width  : 0 0 3px,
-    $_nav-level0-item-color-active           : $primary__color,
-    $_nav-level0-item-text-decoration-active : none,
+    $_nav-level0-item-background-color-active: $desktop-nav-level0-item-background-color-active,
+    $_nav-level0-item__active__border-color  : $desktop-nav-level0-item__active__border-color  ,
+    $_nav-level0-item__active__border-style  : $desktop-nav-level0-item__active__border-style  ,
+    $_nav-level0-item__active__border-width  : $desktop-nav-level0-item__active__border-width  ,
+    $_nav-level0-item-color-active           : $desktop-nav-level0-item-color-active           ,
+    $_nav-level0-item-text-decoration-active : $desktop-nav-level0-item-text-decoration-active ,
 
-    $_submenu-background-color               : $page__background-color,
-    $_submenu-border-width                   : $border-width__base,
-    $_submenu-border-style                   : solid,
-    $_submenu-border-color                   : $border-color__base,
-    $_submenu-box-shadow                     : 0 $indent__xs $indent__xs rgba(0, 0, 0, 0.19),
-    $_submenu-font-size                      : inherit,
-    $_submenu-font-weight                    : $font-weight__bold,
-    $_submenu-min-width                      : 230px,
-    $_submenu-padding                        : 15px 0,
+    $_submenu-background-color               : $desktop-submenu-background-color               ,
+    $_submenu-border-width                   : $desktop-submenu-border-width                   ,
+    $_submenu-border-style                   : $desktop-submenu-border-style                   ,
+    $_submenu-border-color                   : $desktop-submenu-border-color                   ,
+    $_submenu-box-shadow                     : $desktop-submenu-box-shadow                     ,
+    $_submenu-font-size                      : $desktop-submenu-font-size                      ,
+    $_submenu-font-weight                    : $desktop-submenu-font-weight                    ,
+    $_submenu-min-width                      : $desktop-submenu-min-width                      ,
+    $_submenu-padding                        : $desktop-submenu-padding                        ,
 
-    $_submenu-arrow                          : true, // [true|false],
-    $_submenu-arrow-size                     : 10px,
-    $_submenu-arrow-left                     : 20px,
+    $_submenu-arrow                          : $desktop-submenu-arrow                          ,
+    $_submenu-arrow-size                     : $desktop-submenu-arrow-size                     ,
+    $_submenu-arrow-left                     : $desktop-submenu-arrow-left                     ,
 
-    $_submenu-item-padding                   : 8px $indent__base,
-    $_submenu-item-background-color          : inherit,
-    $_submenu-item-border                    : none,
-    $_submenu-item-color                     : $primary__color,
-    $_submenu-item-text-decoration           : inherit,
+    $_submenu-item-padding                   : $desktop-submenu-item-padding                   ,
+    $_submenu-item-background-color          : $desktop-submenu-item-background-color          ,
+    $_submenu-item-border                    : $desktop-submenu-item-border                    ,
+    $_submenu-item-color                     : $desktop-submenu-item-color                     ,
+    $_submenu-item-text-decoration           : $desktop-submenu-item-text-decoration           ,
 
-    $_submenu-item__hover__background-color  : $secondary__color,
-    $_submenu-item-border-hover              : none,
-    $_submenu-item-color-hover               : $primary__color,
-    $_submenu-item-text-decoration-hover     : none,
+    $_submenu-item__hover__background-color  : $desktop-submenu-item__hover__background-color  ,
+    $_submenu-item-border-hover              : $desktop-submenu-item-border-hover              ,
+    $_submenu-item-color-hover               : $desktop-submenu-item-color-hover               ,
+    $_submenu-item-text-decoration-hover     : $desktop-submenu-item-text-decoration-hover     ,
 
-    $_submenu-item-background-color-active   : inherit,
-    $_submenu-item__active__border-color     : $color-orange-red1,
-    $_submenu-item__active__border-style     : solid,
-    $_submenu-item__active__border-width     : 0 0 0 3px,
-    $_submenu-item-color-active              : inherit,
-    $_submenu-item-text-decoration-active    : inherit
+    $_submenu-item-background-color-active   : $desktop-submenu-item-background-color-active   ,
+    $_submenu-item__active__border-color     : $desktop-submenu-item__active__border-color     ,
+    $_submenu-item__active__border-style     : $desktop-submenu-item__active__border-style     ,
+    $_submenu-item__active__border-width     : $desktop-submenu-item__active__border-width     ,
+    $_submenu-item-color-active              : $desktop-submenu-item-color-active              ,
+    $_submenu-item-text-decoration-active    : $desktop-submenu-item-text-decoration-active
 ) {
 
     .navigation {
