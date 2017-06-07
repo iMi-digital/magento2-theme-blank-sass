@@ -1,6 +1,7 @@
 //
 //  Button with solid or picture background
 //  ---------------------------------------------
+$button-icon__use                   : false !default;
 $button-icon__position              : $icon__position !default;
 $button-icon__font                  : $icon-font !default;
 $button-icon__font-size             : 22px !default;
@@ -15,6 +16,11 @@ $button__font-size                  : $font-size__base !default;
 $button__font-weight                : $font-weight__semibold !default;
 $button__line-height                : $line-height__base !default;
 
+$button__display                    : inline-block !default;
+$button__disabled-opacity           : 0.5 !default;
+$button__width                      : auto !default;
+$button__margin                     : 0 !default;
+
 //  Default = secondary button
 $button__padding                    : 7px 15px !default;
 $button__color                      : $primary__color !default;
@@ -24,11 +30,19 @@ $button__border-radius              : 3px !default;
 $button__hover__color               : $color-gray-darken3 !default;
 $button__hover__background          : $color-gray-darken1 !default;
 $button__hover__border              : $button__border !default;
+$button__active__color              : $button__color !default;
 $button__active__background         : $button__color !default;
 $button__active__border             : $button__border !default;
 
 //  Primary button
+$button-primary__line-height        : $button__line-height !default;
+
+$button-primary__display            : $button__display !default;
+$button-primary__disabled-opacity   : $button__disabled-opacity !default;
+$button-primary__width              : $button__width !default;
+$button-primary__margin             : $button__margin !default;
 $button-primary__padding            : $button__padding !default;
+
 $button-primary__color              : $color-white !default;
 $button-primary__background         : $color-blue1 !default;
 $button-primary__border             : 1px solid $button-primary__background !default;
