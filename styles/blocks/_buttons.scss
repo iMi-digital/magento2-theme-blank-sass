@@ -1,6 +1,6 @@
 a.action.primary,
 button {
-    border-radius: 3px;
+    border-radius: $button__border-radius;
 }
 button {
     &:active {

@@ -275,6 +275,7 @@
 
     $_button-color                      : $button-primary__color,
     $_button-border                     : $button-primary__border,
+    $_button-border-radius              : $button-primary__border-radius,
     $_button-background                 : $button-primary__background,
 
     $_button-color-hover                : $button-primary__hover__color,
@@ -304,7 +305,8 @@
         $_button-color                      : $_button-color,
         $_button-background                 : $_button-background,
         $_button-border                     : $_button-border,
-        $_button-color-hover                : $_button-color-hover,
+		$_button-border-radius              : $_button-border-radius,
+		$_button-color-hover                : $_button-color-hover,
         $_button-background-hover           : $_button-background-hover,
         $_button-border-hover               : $_button-border-hover,
         $_button-color-active               : $_button-color-active,
