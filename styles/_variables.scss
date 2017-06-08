@@ -201,17 +201,6 @@ $checkout-shipping-address__max-width: 500px !default;
 //  Typography
 //  ---------------------------------------------
 
-
-$colors: (
-  primary: #FFBB00,
-  secondary: #0969A2
-);
-
-$color: map-get($colors, primary);
-
-@debug "#{$color}";
-
-
 //  Fonts
 $font-family-name__base: 'Open Sans' !default;
 $font-family__base: $font-family-name__base, $font-family__sans-serif !default;
