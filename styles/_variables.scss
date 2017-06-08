@@ -201,9 +201,26 @@ $checkout-shipping-address__max-width: 500px !default;
 //  Typography
 //  ---------------------------------------------
 
+
+$colors: (
+  primary: #FFBB00,
+  secondary: #0969A2
+);
+
+$color: map-get($colors, primary);
+
+@debug "#{$color}";
+
+
 //  Fonts
 $font-family-name__base: 'Open Sans' !default;
 $font-family__base: $font-family-name__base, $font-family__sans-serif !default;
+$font-paths: (
+	300: '../fonts/opensans/light/opensans-300',
+	400: '../fonts/opensans/regular/opensans-400',
+	600: '../fonts/opensans/semibold/opensans-600',
+	700: '../fonts/opensans/bold/opensans-700'
+) !default;
 
 //  Colors nesting
 $page__background-color: $color-white !default;
