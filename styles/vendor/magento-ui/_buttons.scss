@@ -87,6 +87,18 @@
         $_icon-font-text-hide     : $_button-icon-font-text-hide
     );
 
+    &:hover {
+        background: $_button-background-hover;
+        @include lib-background-gradient(
+            $_button-gradient-color-start-hover,
+            $_button-gradient-color-end-hover,
+            $_button-gradient-direction,
+            $_button-gradient
+        );
+        border: $_button-border-hover;
+        color: $_button-color-hover;
+    }
+
     &:focus,
     &:active {
         background: $_button-background-active;
@@ -98,18 +110,6 @@
         );
         border: $_button-border-active;
         color: $_button-color-active;
-    }
-
-    &:hover {
-        background: $_button-background-hover;
-        @include lib-background-gradient(
-            $_button-gradient-color-start-hover,
-            $_button-gradient-color-end-hover,
-            $_button-gradient-direction,
-            $_button-gradient
-        );
-        border: $_button-border-hover;
-        color: $_button-color-hover;
     }
 
     &.disabled,
@@ -243,13 +243,13 @@
     text-shadow: none;
     font-weight: $font-weight__regular;
 
-    &:focus,
-    &:active {
+    &:hover {
         background: none;
         border: none;
     }
 
-    &:hover {
+    &:focus,
+    &:active {
         background: none;
         border: none;
     }
@@ -344,6 +344,12 @@
     border: $_button-border;
     color: $_button-color;
 
+    &:hover {
+        background: $_button-background-hover;
+        border: $_button-border-hover;
+        color: $_button-color-hover;
+    }
+
     &:focus,
     &:active {
         background: $_button-background-active;
@@ -351,11 +357,6 @@
         color: $_button-color-active;
     }
 
-    &:hover {
-        background: $_button-background-hover;
-        border: $_button-border-hover;
-        color: $_button-color-hover;
-    }
 }
 
 //
