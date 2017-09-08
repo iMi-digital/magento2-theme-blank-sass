@@ -9,14 +9,16 @@
 /**
  * @var \Magento\Theme\Block\Html\Header\Logo $block
  */
+    try {
+        $helper = $this->helper( '\IMI\T3Bridge\Helper\Url' );
+        $homeUrl = $helper->getHomeUrl();
+    } catch (\ReflectionException $e) {
+        $homeUrl = $block->getUrl('');
+    }
 ?>
 <?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
 <span data-action="toggle-nav" class="action nav-toggle"><span><?php /* @escapeNotVerified */ echo __('Toggle Nav') ?></span></span>
-<?php if ($block->isHomePage()):?>
-    <strong class="logo">
-<?php else: ?>
-    <a class="logo" href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
-<?php endif ?>
+    <a class="logo" href="<?php echo $homeUrl ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
         <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
              alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
              <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
