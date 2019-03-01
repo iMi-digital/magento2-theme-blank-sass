@@ -1,6 +1,4 @@
-//TODO fix mixin
-
-@mixin lib-font-faces(){
+@mixin lib-font-faces() {
 
 	@if type-of($font-paths) == 'map' {
 
@@ -13,37 +11,42 @@
 			@if $path {
 
 				@include lib-font-face(
-			  	    $family-name: $font-family-name__base,
-			  	    $font-path  : $path,
-			  	    $font-weight: $weight,
-			  	    $font-style : normal
-		  		);
+					$family-name: $font-family-name__base,
+					$font-path: $path,
+					$font-weight: $weight,
+					$font-style: normal
+				);
+			}
+		}
+	}
+}
+
 @include lib-font-face(
-    $family-name: $font-family-name__base,
-    $font-path: '../fonts/opensans/light/opensans-300',
-    $font-weight: 300,
-    $font-style: normal
+	$family-name: $font-family-name__base,
+	$font-path: '../fonts/opensans/light/opensans-300',
+	$font-weight: 300,
+	$font-style: normal
 );
 
 @include lib-font-face(
-    $family-name: $font-family-name__base,
-    $font-path: '../fonts/opensans/regular/opensans-400',
-    $font-weight: 400,
-    $font-style: normal
+	$family-name: $font-family-name__base,
+	$font-path: '../fonts/opensans/regular/opensans-400',
+	$font-weight: 400,
+	$font-style: normal
 );
 
 @include lib-font-face(
-    $family-name: $font-family-name__base,
-    $font-path: '../fonts/opensans/semibold/opensans-600',
-    $font-weight: 600,
-    $font-style: normal
+	$family-name: $font-family-name__base,
+	$font-path: '../fonts/opensans/semibold/opensans-600',
+	$font-weight: 600,
+	$font-style: normal
 );
 
 @include lib-font-face(
-    $family-name: $font-family-name__base,
-    $font-path: '../fonts/opensans/bold/opensans-700',
-    $font-weight: 700,
-    $font-style: normal
+	$family-name: $font-family-name__base,
+	$font-path: '../fonts/opensans/bold/opensans-700',
+	$font-weight: 700,
+	$font-style: normal
 );
 
 //
@@ -51,12 +54,12 @@
 //  _____________________________________________
 
 @include min-screen($screen__m) {
-    h1 {
-        @include lib-css(font-size, $h1__font-size-desktop);
-        @include lib-css(margin-bottom, $h1__margin-bottom__desktop);
-    }
+	h1 {
+		@include lib-css(font-size, $h1__font-size-desktop);
+		@include lib-css(margin-bottom, $h1__margin-bottom__desktop);
+	}
 }
 
 .items {
-    @include lib-list-reset-styles();
+	@include lib-list-reset-styles();
 }

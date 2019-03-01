@@ -1,8 +1,6 @@
 a.action.primary,
 button {
     @include lib-css(border-radius, $button__border-radius);
-    // TODO old
-  // border-radius: $button__border-radius;
 }
 button {
     &:active {
